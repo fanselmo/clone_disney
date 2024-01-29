@@ -22,3 +22,39 @@
         }
     }
 }
+
+.episodios__titulo {
+    margin-bottom: 24px;
+    color: silver;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.episodios__descricao {
+    color: silver;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.episodios__list__item {
+    position: relative;
+    img {
+        width: 100%;
+    }
+    .episodios__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: justify;
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+        background: rgba(0,0,0,0.6);
+        width: 100%;
+        padding: 24px;
+    }
+    &:hover .episodios__content {
+        opacity: 1;
+    }
+}
