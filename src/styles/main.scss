@@ -1,5 +1,50 @@
-$bgColor: blue;
+@use 'hero';
+@use 'variaveis';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $bgColor;
+    background-color: variaveis.$corDeFundo;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTexto;
+}
+
+@mixin title($fontSize: 28px) {
+    @include text($fontSize);
+    font-weight: bold;
+}
+
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title--small {
+    @include title(28px);
+}
+
+.link-text {
+    @include text(14px);
+    text-decoration: none;
+    cursor: pointer;
+    color: variaveis.$corTexto;
 }
