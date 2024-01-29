@@ -1,0 +1,24 @@
+.episodios {
+    padding: 2vw 5.6vw;
+
+    &__title {
+        margin-bottom: 24px;
+        color: silver;
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 24px;
+
+        &__item {
+            img {
+                max-width: 100%;
+                border-radius: 4px;
+            }
+        }
+    }
+}
