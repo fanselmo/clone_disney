@@ -57,4 +57,9 @@
     &:hover .episodios__content {
         opacity: 1;
     }
+
+    .episodios__content a {
+        color: red;
+        text-decoration: none;
+    }
 }
